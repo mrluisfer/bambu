@@ -41,7 +41,7 @@ export const basicPricingPlans: {
         icon: MonitorSmartphone,
       },
       {
-        label: "Optimización de Imagenes",
+        label: "Optimización de Imágenes",
         icon: ImageUpscale,
       },
       {
