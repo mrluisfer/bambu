@@ -44,15 +44,7 @@ export const PricingList = () => {
           >
             <AnimatePresence>
               {basicPricingPlansArray.map((plan) => (
-                <motion.div
-                  key={plan.title}
-                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                  <PricingCard plan={plan} />
-                </motion.div>
+                <PricingCard key={plan.title} plan={plan} />
               ))}
             </AnimatePresence>
           </motion.div>
