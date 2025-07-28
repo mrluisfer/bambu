@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ScrollProgress } from "../magicui/scroll-progress";
+import { ScrollProgress } from "../../magicui/scroll-progress";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { NavbarActions } from "./navbar-actions";
 import { NavbarMobileMenu } from "./navbar-mobile-menu";
@@ -34,7 +34,6 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <NavbarLogo />
             <NavbarDesktopMenu />
-            <NavbarActions />
             <NavbarMobileMenu />
           </div>
           {!isMobile && (

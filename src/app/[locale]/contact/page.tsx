@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/homepage-sections/footer";
+import { Navbar } from "@/components/landing/navbar";
 import { ContactForm } from "@/components/forms/contact-form";
+import { Footer } from "@/components/landing/homepage-sections/footer";
+import { LandingLayout } from "@/components/landing/landing-layout";
 
 export const metadata: Metadata = {
   title: "Contact Us - Get Expert Tech Support",
@@ -11,12 +12,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <>
-      <Navbar />
-      <main className="pt-20">
-        <ContactForm />
-      </main>
-      <Footer />
-    </>
+    <LandingLayout withFooter>
+      <ContactForm />
+    </LandingLayout>
   );
 }

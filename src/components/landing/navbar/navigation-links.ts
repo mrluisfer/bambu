@@ -1,22 +1,23 @@
 import { HomepageSections } from "@/constants/homepage-sections";
 
 export const navigationLinks = [
-  { href: `/#${HomepageSections.HERO}`, label: "homeLink" },
-  { label: "servicesLink", href: `/#${HomepageSections.SERVICES}` },
+  { href: `/#${HomepageSections.HERO}`, label: "Inicio" },
+  { label: "Servicios", href: `/#${HomepageSections.SERVICES}` },
   {
-    label: "featuresLink",
+    label: "Características",
     submenu: true,
     type: "description",
     items: [
       {
         href: `/#${HomepageSections.TESTIMONIALS}`,
-        label: "testimonialsLink",
-        description: "testimonialsLinkDescription",
+        label: "Testimonios",
+        description: "Descubre lo que dicen nuestros clientes.",
       },
       {
         href: "/health-check",
-        label: "healthCheckLink",
-        description: "healthCheckLinkDescription",
+        label: "Chequeo de Salud",
+        description:
+          "Obtén una evaluación integral del estado de tu dispositivo.",
       },
     ],
   },
@@ -31,8 +32,8 @@ export const navigationLinks = [
   //     { href: "#", label: "Product D" },
   //   ],
   // },
-  { label: "contactLink", href: "/contact" },
-  { label: "pricingLink", href: "/pricing" },
+  { label: "Contacto", href: "/contact" },
+  { label: "Precios", href: "/pricing" },
   // {
   //   label: "aboutLink",
   //   href: "/about",

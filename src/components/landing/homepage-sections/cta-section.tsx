@@ -5,15 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Phone, Calendar, MessageSquare } from "lucide-react";
-import { useTranslations } from "next-intl";
 
 export function CTASection() {
-  const t = useTranslations("HomePage.CTASection");
-
-  const phone = t("contact.phone");
-  const schedule = t("contact.schedule");
-  const response = t("contact.response");
-
   return (
     <section className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
@@ -39,7 +32,7 @@ export function CTASection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  {t("title")}
+                  ¿Listo para comenzar?
                 </motion.h2>
 
                 <motion.p
@@ -49,7 +42,8 @@ export function CTASection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  {t("description")}
+                  No dejes que los problemas tecnológicos te detengan. Obtén
+                  atención experta hoy y descubre la diferencia Bambú.
                 </motion.p>
 
                 <motion.div
@@ -66,7 +60,7 @@ export function CTASection() {
                   >
                     <Link href="/contact">
                       <MessageSquare className="mr-2 w-5 h-5" />
-                      {t("ctaQuote")}
+                      Solicitar cotización gratis
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
@@ -79,7 +73,7 @@ export function CTASection() {
                   >
                     <Link href="/health-check">
                       <Calendar className="mr-2 w-5 h-5" />
-                      {t("ctaHealthCheck")}
+                      Prueba el Chequeo de Salud
                     </Link>
                   </Button>
                 </motion.div>
@@ -93,21 +87,17 @@ export function CTASection() {
                 >
                   <div className="flex items-center space-x-2">
                     <Phone className="w-5 h-5" />
-                    <span className="font-medium">{phone}</span>
+                    <span className="font-medium">+(555) 123-TECH</span>
                   </div>
                   <div className="hidden sm:block w-px h-6 bg-white/30" />
                   <div className="text-sm">
-                    <span className="font-medium">
-                      {t("contact.openLabel")}
-                    </span>{" "}
-                    {schedule}
+                    <span className="font-medium">Horario:</span> Lun-Vie
+                    9AM-6PM
                   </div>
                   <div className="hidden sm:block w-px h-6 bg-white/30" />
                   <div className="text-sm">
-                    <span className="font-medium">
-                      {t("contact.responseLabel")}
-                    </span>{" "}
-                    {response}
+                    <span className="font-medium">Respuesta:</span> En menos de
+                    2 horas
                   </div>
                 </motion.div>
               </div>

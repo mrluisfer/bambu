@@ -12,7 +12,8 @@
     "pricingLink": "Pricing",
     "aboutLink": "About",
     "seeYourOrdersLink": "See Your Services",
-    "seeYourOrdersLinkDescription": "View your services history and status."
+    "seeYourOrdersLinkDescription": "View your services history and status.",
+    "seeOurServices": "See our services"
   },
   "HomePage": {
     "HeroSection": {
@@ -354,5 +355,10 @@
     "copyright": "© 2024 Bambú Tech Care. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "Services": {
+    "solutions": "Solutions",
+    "madeForYou": "made for you",
+    "chooseTheService": "Choose the service or plan that suits your needs to boost your business or project."
   }
 }

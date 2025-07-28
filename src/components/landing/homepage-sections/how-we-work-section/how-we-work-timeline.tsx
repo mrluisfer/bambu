@@ -9,7 +9,7 @@ import {
   TimelineItem,
   TimelineSeparator,
   TimelineTitle,
-} from "../../ui/timeline";
+} from "../../../ui/timeline";
 import { HowWeWorkCard } from "./how-we-work-card";
 import { Steps } from ".";
 

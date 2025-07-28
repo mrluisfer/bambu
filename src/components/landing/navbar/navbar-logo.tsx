@@ -1,11 +1,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Logo } from "../logo";
-import { useTranslations } from "next-intl";
+import { Logo } from "../../logo";
 
 export function NavbarLogo() {
-  const t = useTranslations("Navbar");
-
   return (
     <motion.div
       className="flex items-center space-x-3"
@@ -17,7 +14,7 @@ export function NavbarLogo() {
           <Logo width={24} height={24} />
         </div>
         <span className="text-2xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent">
-          {t("brandName")}
+          Bambú
         </span>
       </Link>
     </motion.div>

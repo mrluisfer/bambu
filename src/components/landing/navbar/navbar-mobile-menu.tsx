@@ -4,13 +4,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
 import { navigationLinks } from "./navigation-links";
 
 export function NavbarMobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const t = useTranslations("Navbar");
 
   return (
     <div className="md:hidden">
@@ -34,7 +32,7 @@ export function NavbarMobileMenu() {
                   : "text-slate-600 hover:text-brand-600"
                 }`}
               >
-                {t(item.label)}
+                {item.label}
               </Link>
             ))}
           </div>

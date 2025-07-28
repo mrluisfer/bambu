@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { Play } from "lucide-react";
 import type { ComponentProps, ReactNode } from "react";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
-import { TranslationKeys } from "@/types/translation-keys";
 
 interface TryHealthCheckButtonProps extends ComponentProps<"button"> {
   href?: string;
@@ -22,6 +20,7 @@ export const TryHealthCheckButton = ({
   ),
   className = "",
   size,
+  children,
   ...props
 }: TryHealthCheckButtonProps) => {
   return (
@@ -36,7 +35,7 @@ export const TryHealthCheckButton = ({
     >
       <Link href={href}>
         {icon}
-        {label}
+        {label || children}
       </Link>
     </Button>
   );

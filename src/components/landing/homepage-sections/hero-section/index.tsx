@@ -5,16 +5,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Leaf, ArrowRight, Play, ChevronDown } from "lucide-react";
 import { HomepageSections } from "@/constants/homepage-sections";
-import { Logo } from "../../logo";
+import { Logo } from "../../../logo";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { TryHealthCheckButton } from "../try-health-check-button";
-import { useTranslations } from "next-intl";
-import { TranslationKeys } from "@/types/translation-keys";
-import { Globe } from "../../magicui/globe";
-import { COBEOptions } from "cobe";
-import { AuroraText } from "../../magicui/aurora-text";
-import { IconContainer } from "../../icon-container";
-import { globeConfig } from "@/constants/globe-config";
+import { AuroraText } from "../../../magicui/aurora-text";
+import { IconContainer } from "../../../icon-container";
 import { HeroGlobe } from "./hero-globe";
 
 const fadeInUp = {
@@ -31,17 +26,9 @@ const staggerContainer = {
   },
 };
 
-const brandNameColors = [
-  "#16a34a", // brand-600
-  "#14b8a6", // accent-500
-  "#4ade80", // brand-400
-  "#0f766e", // accent-700
-];
-
 export function HeroSection() {
   const isMobile = useIsMobile();
   const logoSize = isMobile ? 48 : 80;
-  const t = useTranslations<TranslationKeys>("HomePage.HeroSection");
 
   return (
     <section
@@ -85,7 +72,7 @@ export function HeroSection() {
             variants={fadeInUp}
           >
             <span className="sr-only bg-gradient-to-r from-brand-600 via-accent-600 to-brand-700 bg-clip-text text-transparent">
-              {t("brandName")}
+              Bambú
             </span>
             <AuroraText
               className="not-sr-only"
@@ -96,7 +83,7 @@ export function HeroSection() {
                 "var(--color-accent-700)",
               ]}
             >
-              {t("brandName")}
+              Bambú
             </AuroraText>
           </motion.h1>
 
@@ -105,7 +92,7 @@ export function HeroSection() {
             className="text-xl sm:text-2xl lg:text-3xl text-slate-600 mb-8 font-medium"
             variants={fadeInUp}
           >
-            {t("subtitle")}
+            Cuidado tecnológico flexible para todos.
           </motion.p>
 
           {/* Description */}
@@ -113,7 +100,9 @@ export function HeroSection() {
             className="text-lg sm:text-xl text-slate-500 mb-12 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            {t("description")}
+            Mantenimiento profesional de computadoras y dispositivos, adaptado a
+            tus necesidades. Desde soluciones rápidas hasta planes integrales,
+            mantenemos tu tecnología funcionando sin problemas.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -127,12 +116,12 @@ export function HeroSection() {
               className="bg-gradient-to-r from-brand-500 to-accent-600 hover:from-brand-600 hover:to-accent-700 text-white px-8 py-6 text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group"
             >
               <Link href="/contact">
-                {t("getStartedButton")}
+                Comenzar
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
 
-            <TryHealthCheckButton label={t("tryHealthCheck")} />
+            <TryHealthCheckButton>Probar Chequeo de Salud</TryHealthCheckButton>
           </motion.div>
 
           {/* Trust Indicators */}
@@ -142,15 +131,15 @@ export function HeroSection() {
           >
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-brand-500 rounded-full" />
-              <span>{t("90DaysWarranty")}</span>
+              <span>Garantía de 90 días en todas las reparaciones.</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-brand-500 rounded-full" />
-              <span>{t("hourTurnaround")}</span>
+              <span>Entrega en 24-48 horas.</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-brand-500 rounded-full" />
-              <span>{t("certifiedTechnicians")}</span>
+              <span>Técnicos certificados.</span>
             </div>
           </motion.div>
         </motion.div>

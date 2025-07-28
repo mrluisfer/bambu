@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/homepage-sections/footer";
 import { TechHealthCheck } from "@/components/features/tech-health-check";
+import { LandingLayout } from "@/components/landing/landing-layout";
 
 export const metadata: Metadata = {
   title: "Tech Health Check - Free Device Diagnostic",
@@ -11,12 +10,8 @@ export const metadata: Metadata = {
 
 export default function HealthCheckPage() {
   return (
-    <>
-      <Navbar />
-      <main className="pt-20">
-        <TechHealthCheck />
-      </main>
-      <Footer />
-    </>
+    <LandingLayout withFooter>
+      <TechHealthCheck />
+    </LandingLayout>
   );
 }

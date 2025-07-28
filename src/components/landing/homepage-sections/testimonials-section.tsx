@@ -5,28 +5,12 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
 import { HomepageSections } from "@/constants/homepage-sections";
 import { HomePageTitle } from "./title";
-import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-import { NumberTicker } from "../magicui/number-ticker";
+import { NumberTicker } from "../../magicui/number-ticker";
+import { testimonials } from "@/constants/testimonials";
+import { trustIndicators } from "@/constants/testimonials-indicators";
 
 export function TestimonialsSection() {
-  const t = useTranslations("HomePage.TestimonialsSection");
-
-  const testimonials = t.raw("testimonials") as {
-    name: string;
-    role: string;
-    avatar: string;
-    content: string;
-    rating: number;
-    company: string;
-  }[];
-
-  const trustIndicators = t.raw("trustIndicators") as Array<{
-    value: string;
-    label: string;
-    symbol?: string;
-  }>;
-
   const firstRow = testimonials.slice(0, Math.ceil(testimonials.length / 2));
   const secondRow = testimonials.slice(Math.ceil(testimonials.length / 2));
 
@@ -82,7 +66,12 @@ export function TestimonialsSection() {
       id={HomepageSections.TESTIMONIALS}
     >
       <div className="container mx-auto">
-        <HomePageTitle title={t("title")} description={t("description")} />
+        <HomePageTitle
+          title={"Lo que dicen nuestros clientes"}
+          description={
+            "Experiencias reales de personas que confían en nosotros para su tecnología."
+          }
+        />
 
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden my-10 gap-3">
           <Marquee pauseOnHover className="[--duration:32s]">

@@ -11,8 +11,7 @@ import {
   Twitter,
   Instagram,
 } from "lucide-react";
-import { Logo } from "../logo";
-import { useTranslations } from "next-intl";
+import { Logo } from "@/components/logo";
 
 const socialLinks = [
   { name: "Facebook", href: "#", icon: Facebook },
@@ -20,23 +19,39 @@ const socialLinks = [
   { name: "Instagram", href: "#", icon: Instagram },
 ];
 
+// Read links as arrays of { name, href }
+const footerLinks = {
+  services: [
+    {
+      name: "Reparación de computadoras",
+      href: "/services/computer-repair",
+    },
+    { name: "Dispositivos móviles", href: "/services/mobile-devices" },
+    { name: "Soluciones empresariales", href: "/services/business" },
+    { name: "Recuperación de datos", href: "/services/data-recovery" },
+  ],
+  company: [
+    { name: "Sobre nosotros", href: "/about" },
+    { name: "Nuestro proceso", href: "/process" },
+    { name: "Testimonios", href: "/testimonials" },
+    { name: "Empleos", href: "/careers" },
+  ],
+  support: [
+    { name: "Centro de ayuda", href: "/help" },
+    { name: "Contacto", href: "/contact" },
+    { name: "Estado del servicio", href: "/status" },
+    { name: "Garantía", href: "/warranty" },
+  ],
+};
+
+const contact = {
+  phone: "(555) 123-TECH",
+  email: "hola@bambu.tech",
+  location: "Área Metropolitana",
+  hours: "Lun-Vie 9AM-6PM",
+};
+
 export function Footer() {
-  const t = useTranslations("Footer");
-
-  // Read links as arrays of { name, href }
-  const footerLinks = {
-    services: t.raw("links.services") as { name: string; href: string }[],
-    company: t.raw("links.company") as { name: string; href: string }[],
-    support: t.raw("links.support") as { name: string; href: string }[],
-  };
-
-  const contact = t.raw("contact") as {
-    phone: string;
-    email: string;
-    location: string;
-    hours: string;
-  };
-
   return (
     <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
@@ -54,7 +69,7 @@ export function Footer() {
               <div className="w-12 h-12 bg-gradient-to-br from-brand-500 to-accent-600 rounded-2xl flex items-center justify-center">
                 <Logo width={28} height={28} />
               </div>
-              <span className="text-3xl font-bold">{t("brandName")}</span>
+              <span className="text-3xl font-bold">Bambú</span>
             </motion.div>
 
             <motion.p
@@ -64,7 +79,8 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              {t("description")}
+              Cuidado tecnológico flexible para todos. Mantenimiento profesional
+              de computadoras y dispositivos que se adapta a tus necesidades.
             </motion.p>
 
             {/* Contact Info */}
@@ -101,9 +117,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-lg font-semibold mb-4">
-              {t("sections.services")}
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Servicios</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -125,9 +139,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-lg font-semibold mb-4">
-              {t("sections.company")}
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Compañía</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -149,9 +161,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <h3 className="text-lg font-semibold mb-4">
-              {t("sections.support")}
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Soporte</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
@@ -178,7 +188,8 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              {t("copyright")}
+              © {new Date().getFullYear()} Bambú Tech Care. Todos los derechos
+              reservados.
             </motion.p>
 
             {/* Social Links */}
@@ -213,13 +224,13 @@ export function Footer() {
                 href="/privacy"
                 className="text-slate-400 hover:text-brand-400 transition-colors"
               >
-                {t("privacy")}
+                Aviso de privacidad
               </Link>
               <Link
                 href="/terms"
                 className="text-slate-400 hover:text-brand-400 transition-colors"
               >
-                {t("terms")}
+                Términos de servicio
               </Link>
             </motion.div>
           </div>

@@ -4,9 +4,11 @@ import { motion } from "motion/react";
 export const HomePageTitle = ({
   title,
   description,
+  children,
 }: {
-  title: ReactNode;
+  title?: ReactNode;
   description: ReactNode;
+  children?: ReactNode;
 }) => {
   return (
     <motion.div
@@ -17,7 +19,7 @@ export const HomePageTitle = ({
       transition={{ duration: 0.8 }}
     >
       <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-800">
-        {title}
+        {title || children}
       </h2>
       <p className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed text-slate-600">
         {description}
