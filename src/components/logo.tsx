@@ -18,7 +18,7 @@ export const Logo = ({
   return (
     <Image
       src={logoSrc}
-      alt="Bambu"
+      alt="Bambú"
       className={className}
       width={width}
       height={height}
