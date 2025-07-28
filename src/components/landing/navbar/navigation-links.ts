@@ -1,7 +1,7 @@
 import { HomepageSections } from "@/constants/homepage-sections";
 
 export const navigationLinks = [
-  { href: `/#${HomepageSections.HERO}`, label: "Inicio" },
+  { href: "/", label: "Inicio" },
   { label: "Servicios", href: `/#${HomepageSections.SERVICES}` },
   {
     label: "Características",
