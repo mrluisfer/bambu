@@ -211,6 +211,20 @@ html {
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --animate-background-position-spin: background-position-spin 3000ms infinite
     alternate;
+  --animate-meteor: meteor 5s linear infinite;
+}
+@keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
+  }
 }
 
 :root {

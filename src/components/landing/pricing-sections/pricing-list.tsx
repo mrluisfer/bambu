@@ -4,10 +4,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PricingCard } from "./pricing-card";
 import { basicPricingPlansArray } from "../../../constants/pricing-plans/basic";
 import { motion, AnimatePresence } from "motion/react";
+import { ReactNode } from "react";
+import { complexPricingPlansArray } from "@/constants/pricing-plans/complex";
+import { Pointer } from "@/components/magicui/pointer";
+import { Card } from "@/components/ui/card";
+import { PricingCustomCard } from "./pricing-custom-card";
+import { PricingListContainer } from "./pricing-list-container";
 
 enum PricingTabsId {
   Basic = "basic",
   Complex = "complex",
+  Custom = "custom",
 }
 
 export const PricingList = () => {
@@ -20,46 +27,29 @@ export const PricingList = () => {
             initial={{ opacity: 0, y: 32 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <TabsTrigger value={PricingTabsId.Basic}>
-              Landing Pages Básicas
-            </TabsTrigger>
-            <TabsTrigger value={PricingTabsId.Complex}>
-              Landing Pages Complejas
+            <TabsTrigger value={PricingTabsId.Basic}>Básicas</TabsTrigger>
+            <TabsTrigger value={PricingTabsId.Complex}>Complejas</TabsTrigger>
+            <TabsTrigger value={PricingTabsId.Custom}>
+              Personalizadas
             </TabsTrigger>
           </motion.div>
         </TabsList>
         <TabsContent value={PricingTabsId.Basic}>
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.08,
-                },
-              },
-            }}
-          >
-            <AnimatePresence>
-              {basicPricingPlansArray.map((plan) => (
-                <PricingCard key={plan.title} plan={plan} />
-              ))}
-            </AnimatePresence>
-          </motion.div>
+          <PricingListContainer>
+            {basicPricingPlansArray.map((plan) => (
+              <PricingCard key={plan.title} plan={plan} />
+            ))}
+          </PricingListContainer>
         </TabsContent>
         <TabsContent value={PricingTabsId.Complex} className="px-16">
-          <motion.div
-            className="flex flex-col items-center justify-center py-24 min-h-[220px]"
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <span className="text-xl text-muted-foreground">
-              Próximamente más opciones avanzadas 🚀
-            </span>
-          </motion.div>
+          <PricingListContainer>
+            {complexPricingPlansArray.map((plan) => (
+              <PricingCard key={plan.title} plan={plan} />
+            ))}
+          </PricingListContainer>
+        </TabsContent>
+        <TabsContent value={PricingTabsId.Custom}>
+          <PricingCustomCard />
         </TabsContent>
       </Tabs>
     </div>

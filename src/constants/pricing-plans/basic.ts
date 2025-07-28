@@ -1,27 +1,15 @@
+import { PricingPlan } from "@/types/pricing-plan";
 import {
   BotMessageSquare,
   ChartNoAxesCombined,
   ImageUpscale,
-  LucideProps,
   MessageCircleMore,
   MonitorSmartphone,
   Rocket,
   Scroll,
   Undo2,
 } from "lucide-react";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
 
-export type PricingPlan = {
-  title: string;
-  price: number;
-  description: string;
-  features: Array<{
-    label: string;
-    icon: ForwardRefExoticComponent<
-      Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-    >;
-  }>;
-};
 export const basicPricingPlans: {
   basic: PricingPlan;
   basicWithSocialMedia: PricingPlan;

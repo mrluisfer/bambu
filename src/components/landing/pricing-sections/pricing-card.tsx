@@ -7,10 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { PricingPlan } from "@/constants/pricing-plans/basic";
 import { DollarSign } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { PricingPlan } from "@/types/pricing-plan";
 
 export const PricingCard = ({ plan }: { plan: PricingPlan }) => (
   <motion.div
@@ -49,7 +49,7 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => (
           ))}
         </ul>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex justify-center items-center">
         <Button asChild variant="default" size="lg">
           <Link href="/contact" className="w-full">
             ¡Lo quiero!

@@ -9,7 +9,7 @@ import { ArrowRight, Phone, Calendar, MessageSquare } from "lucide-react";
 export function CTASection() {
   return (
     <section className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
