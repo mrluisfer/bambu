@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RainbowButton } from "../../magicui/rainbow-button";
+import { RainbowButton } from "../magicui/rainbow-button";
 
 export function NavbarActions() {
   return (

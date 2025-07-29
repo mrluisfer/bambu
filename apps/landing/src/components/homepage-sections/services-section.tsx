@@ -20,7 +20,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../ui/accordion";
+} from "../ui/accordion";
 
 const icons = [Smartphone, Laptop, Monitor, Clock, Users, Shield];
 

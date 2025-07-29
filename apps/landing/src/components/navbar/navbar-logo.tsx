@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Logo } from "../../logo";
+import { Logo } from "../logo";
 
 export function NavbarLogo() {
   return (

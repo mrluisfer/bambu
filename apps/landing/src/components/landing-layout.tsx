@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Navbar } from "./navbar";
 import { Footer } from "./homepage-sections/footer";
 import { cn } from "@/lib/utils";
-import { GoToTopButton } from "../go-to-top-button";
+import { GoToTopButton } from "./go-to-top-button";
 
 export const LandingLayout = ({
   children,

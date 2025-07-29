@@ -2,7 +2,6 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PricingCard } from "./pricing-card";
-import { basicPricingPlansArray } from "../../../constants/pricing-plans/basic";
 import { motion, AnimatePresence } from "motion/react";
 import { ReactNode } from "react";
 import { complexPricingPlansArray } from "@/constants/pricing-plans/complex";
@@ -10,6 +9,7 @@ import { Pointer } from "@/components/magicui/pointer";
 import { Card } from "@/components/ui/card";
 import { PricingCustomCard } from "./pricing-custom-card";
 import { PricingListContainer } from "./pricing-list-container";
+import { basicPricingPlansArray } from "@/constants/pricing-plans/basic";
 
 enum PricingTabsId {
   Basic = "basic",

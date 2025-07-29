@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Leaf, ArrowRight, Play, ChevronDown } from "lucide-react";
 import { HomepageSections } from "@/constants/homepage-sections";
-import { Logo } from "../../../logo";
+import { Logo } from "../../logo";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { TryHealthCheckButton } from "../try-health-check-button";
-import { AuroraText } from "../../../magicui/aurora-text";
-import { IconContainer } from "../../../icon-container";
+import { AuroraText } from "../../magicui/aurora-text";
+import { IconContainer } from "../../icon-container";
 import { HeroGlobe } from "./hero-globe";
 
 const fadeInUp = {

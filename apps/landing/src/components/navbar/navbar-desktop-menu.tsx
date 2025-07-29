@@ -5,7 +5,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "../../ui/navigation-menu";
+} from "../ui/navigation-menu";
 import { BookOpenIcon, InfoIcon, LifeBuoyIcon } from "lucide-react";
 import { navigationLinks } from "./navigation-links";
 import { cn } from "@/lib/utils";

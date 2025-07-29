@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ScrollProgress } from "../../magicui/scroll-progress";
+import { ScrollProgress } from "../magicui/scroll-progress";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { NavbarActions } from "./navbar-actions";
 import { NavbarMobileMenu } from "./navbar-mobile-menu";

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "../../ui/button";
+import { Button } from "../ui/button";
 import { Play } from "lucide-react";
 import type { ComponentProps, ReactNode } from "react";
 import clsx from "clsx";

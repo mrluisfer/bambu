@@ -6,7 +6,7 @@ import { Star } from "lucide-react";
 import { HomepageSections } from "@/constants/homepage-sections";
 import { HomePageTitle } from "./title";
 import { cn } from "@/lib/utils";
-import { NumberTicker } from "../../magicui/number-ticker";
+import { NumberTicker } from "../magicui/number-ticker";
 import { testimonials } from "@/constants/testimonials";
 import { trustIndicators } from "@/constants/testimonials-indicators";
 
