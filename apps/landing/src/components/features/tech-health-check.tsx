@@ -344,8 +344,9 @@ export function TechHealthCheck() {
                 Tech Health Check
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Let's give your device a quick checkup! Answer a few friendly
-                questions and we'll tell you how your tech is doing.
+                Let&apos;s give your device a quick checkup! Answer a few
+                friendly questions and we&apos;ll tell you how your tech is
+                doing.
               </p>
               <p className="text-lg text-slate-500 mb-12">
                 Takes less than 2 minutes • Get personalized recommendations •
@@ -407,19 +408,20 @@ export function TechHealthCheck() {
                     <CardHeader className="text-center pb-6">
                       <div className="w-16 h-16 bg-gradient-to-br from-brand-500 to-accent-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                         {(() => {
-                          const CurrentIcon = questions[currentQuestion].icon;
+                          const CurrentIcon =
+                            questions[currentQuestion]?.icon ?? Laptop;
                           return <CurrentIcon className="w-8 h-8 text-white" />;
                         })()}
                       </div>
                       <CardTitle className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
-                        {questions[currentQuestion].title}
+                        {questions[currentQuestion]?.title}
                       </CardTitle>
                       <p className="text-lg text-slate-600">
-                        {questions[currentQuestion].subtitle}
+                        {questions[currentQuestion]?.subtitle}
                       </p>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      {questions[currentQuestion].options.map(
+                      {questions[currentQuestion]?.options.map(
                         (option, index) => (
                           <motion.div
                             key={index}
@@ -431,7 +433,7 @@ export function TechHealthCheck() {
                               variant="outline"
                               onClick={() =>
                                 handleAnswer(
-                                  questions[currentQuestion].id,
+                                  questions[currentQuestion]?.id ?? "",
                                   option.value,
                                   option.text
                                 )
