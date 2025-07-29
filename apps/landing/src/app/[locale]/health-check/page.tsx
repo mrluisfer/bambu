@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { TechHealthCheck } from "@/components/features/tech-health-check";
-import { LandingLayout } from "@/components/landing/landing-layout";
+import { LandingLayout } from "@/components/landing-layout";
 
 export const metadata: Metadata = {
   title: "Tech Health Check - Free Device Diagnostic",

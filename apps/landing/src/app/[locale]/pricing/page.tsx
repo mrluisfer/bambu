@@ -1,8 +1,8 @@
 "use client";
-import { LandingLayout } from "@/components/landing/landing-layout";
-import { PricingHero } from "@/components/landing/pricing-sections/hero";
-import { PricingBanner } from "@/components/landing/pricing-sections/pricing-banner";
-import { PricingList } from "@/components/landing/pricing-sections/pricing-list";
+import { LandingLayout } from "@/components/landing-layout";
+import { PricingHero } from "@/components/pricing-sections/hero";
+import { PricingBanner } from "@/components/pricing-sections/pricing-banner";
+import { PricingList } from "@/components/pricing-sections/pricing-list";
 
 export default function ServicesPage() {
   return (
