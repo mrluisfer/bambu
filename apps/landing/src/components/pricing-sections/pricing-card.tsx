@@ -8,9 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { DollarSign } from "lucide-react";
-import Link from "next/link";
 import { motion } from "motion/react";
 import { PricingPlan } from "@/types/pricing-plan";
+import { PricingDialogForm } from "./pricing-dialog-form";
 
 export const PricingCard = ({ plan }: { plan: PricingPlan }) => (
   <motion.div
@@ -49,12 +49,12 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => (
           ))}
         </ul>
       </CardContent>
-      <CardFooter className="flex justify-center items-center">
-        <Button asChild variant="default" size="lg">
-          <Link href="/contact" className="w-full">
+      <CardFooter>
+        <PricingDialogForm>
+          <Button variant="default" size="lg" className="w-full">
             ¡Lo quiero!
-          </Link>
-        </Button>
+          </Button>
+        </PricingDialogForm>
       </CardFooter>
     </Card>
   </motion.div>
