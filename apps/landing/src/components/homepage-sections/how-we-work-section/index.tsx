@@ -1,7 +1,6 @@
 "use client";
 
 import { HomePageTitle } from "../title";
-import { TranslationKeys } from "@/types/translation-keys";
 import { HowWeWorkTimeline } from "./how-we-work-timeline";
 import { HowWeWorkFlex } from "./how-we-work-flex";
 

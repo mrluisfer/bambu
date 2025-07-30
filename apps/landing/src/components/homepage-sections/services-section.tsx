@@ -11,6 +11,7 @@ import {
   Users,
   Shield,
   ArrowRight,
+  Braces,
 } from "lucide-react";
 import { HomepageSections } from "@/constants/homepage-sections";
 import { HomePageTitle } from "./title";
@@ -224,13 +225,15 @@ export function ServicesSection() {
           viewport={{ once: true }}
         >
           {services.map((service, index) => {
-            const Icon = icons[index];
+            const Icon = icons[index] ?? Braces;
             return (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="min-h-[440px] max-h-[540px] h-fit border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white to-brand-50/30 rounded-3xl group hover:scale-105 flex flex-col">
                   <CardHeader className="pb-4">
                     <div className="w-14 h-14 bg-gradient-to-br from-brand-500 to-accent-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-7 h-7 text-white" />
+                      {Icon ?
+                        <Icon className="w-7 h-7 text-white" />
+                      : null}
                     </div>
                     <CardTitle className="text-xl font-bold text-slate-800">
                       {service.title}

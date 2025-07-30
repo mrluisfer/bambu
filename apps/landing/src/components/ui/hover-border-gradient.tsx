@@ -29,7 +29,7 @@ export function HoverBorderGradient({
       clockwise ?
         (currentIndex - 1 + directions.length) % directions.length
       : (currentIndex + 1) % directions.length;
-    return directions[nextIndex];
+    return directions[nextIndex] ?? "TOP";
   };
 
   const movingMap: Record<Direction, string> = {

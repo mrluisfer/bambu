@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ScrollProgress } from "../magicui/scroll-progress";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { NavbarActions } from "./navbar-actions";
 import { NavbarMobileMenu } from "./navbar-mobile-menu";
 import { NavbarDesktopMenu } from "./navbar-desktop-menu";
 import { NavbarLogo } from "./navbar-logo";

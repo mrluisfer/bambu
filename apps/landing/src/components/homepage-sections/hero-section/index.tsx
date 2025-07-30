@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Leaf, ArrowRight, Play, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { HomepageSections } from "@/constants/homepage-sections";
 import { Logo } from "../../logo";
 import { useIsMobile } from "@/hooks/use-mobile";
