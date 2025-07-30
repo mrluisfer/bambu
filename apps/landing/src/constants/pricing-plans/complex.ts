@@ -3,7 +3,6 @@ import {
   ChartNoAxesCombined,
   Database,
   FileJson2,
-  ImageUpscale,
   LayoutDashboard,
   Layers3,
   Link2,

@@ -161,7 +161,7 @@ export const PricingDialogForm = ({ children }: { children: ReactNode }) => {
               />
             </div>
 
-            <DialogFooter>
+            <DialogFooter className="mt-6">
               <DialogClose asChild>
                 <Button variant="outline">Cancelar</Button>
               </DialogClose>
