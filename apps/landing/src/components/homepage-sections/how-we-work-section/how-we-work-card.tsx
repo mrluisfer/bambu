@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "motion/react";
-import { Phone, CheckCircle, Wrench, Shield } from "lucide-react";
+import { Phone, CheckCircle, Wrench, Shield, Box } from "lucide-react";
 
 type HowWeWorkCardProps = {
   id: number;
@@ -20,7 +20,7 @@ const fadeInUp = {
 const icons = [Phone, CheckCircle, Wrench, Shield];
 
 export const HowWeWorkCard = ({ id, step }: HowWeWorkCardProps) => {
-  const Icon = icons[id];
+  const Icon = icons[id] ?? Box;
 
   return (
     <motion.div key={id} variants={fadeInUp}>
@@ -49,7 +49,9 @@ export const HowWeWorkCard = ({ id, step }: HowWeWorkCardProps) => {
                 "linear-gradient(135deg, var(--color-brand-500), var(--color-accent-500))",
             }}
           >
-            <Icon className="w-8 h-8 text-white" />
+            {Icon ?
+              <Icon className="w-8 h-8 text-white" />
+            : null}
           </motion.div>
           <CardTitle
             className="text-lg xl:text-xl font-bold"
