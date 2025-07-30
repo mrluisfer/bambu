@@ -12,6 +12,8 @@ export function Navbar() {
   const isMobile = useIsMobile();
 
   useEffect(() => {
+    setIsScrolled(window.scrollY > 20);
+
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
