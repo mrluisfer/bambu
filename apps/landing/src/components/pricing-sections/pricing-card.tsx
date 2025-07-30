@@ -20,7 +20,7 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => (
     exit={{ opacity: 0, y: 20, scale: 0.95 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
   >
-    <Card className="rounded-3xl overflow-hidden shadow-brand-400 hover:shadow-2xl transition h-fit border-2 border-transparent hover:border-brand-600 max-w-[550px]">
+    <Card className="rounded-3xl overflow-hidden shadow-brand-400 hover:shadow-2xl transition h-fit border-2 border-transparent hover:border-brand-600 max-w-[550px] mx-auto">
       <CardHeader>
         <CardTitle>
           <p className="font-bold text-2xl">{plan.title}</p>
