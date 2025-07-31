@@ -1,11 +1,8 @@
-import { LucideProps } from "lucide-react";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
+import { LucideIconType } from "./LucideIconType";
 
 export type PricingPlanFeature = {
   label: string;
-  icon: ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-  >;
+  icon: LucideIconType;
 };
 
 export type PricingPlan = {
